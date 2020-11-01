@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+  animation: change-bg-color 40s 2s infinite alternate ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(87, 87, 175);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: -500px;
+  animation: movedown 5s 1s 1 forwards ease-in;
+}
+section {
+  margin: 15px auto auto auto;
+  border: 2px solid;
+  border-radius: 5px;
+  text-align: center;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+label {
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+}
+#hours-worked {
+  background-color: blanchedalmond;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+  padding: 5px;
+}
+#submit {
+  background-color: rgb(0, 0, 0);
+  height: 30px;
+  border: 1px thick;
+  border-radius: 5px;
+  font-size: small;
+  font-weight: bold;
+  padding: auto;
+  color: rgba(255, 255, 255, 0.836);
+}
+#submit:hover {
+  background-color: rgb(255, 255, 255);
+  height: 30px;
+  border: 1px thick;
+  border-radius: 5px;
+  padding: auto;
+  color: rgba(15, 13, 13, 0.918);
+}
+.result {
+  display: none;
+  font-size: large;
+  font-weight: bold;
+}
+.result span {
+  font-size: larger;
+  font-weight: bolder;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+@keyframes movedown {
+  from {
+    top: -500px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes change-bg-color {
+  0% {
+    background: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0),
+      rgba(255, 0, 0, 1)
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to right,
+      rgba(235, 212, 12, 0),
+      rgb(114, 1, 1)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to right,
+      rgba(151, 64, 64, 0),
+      rgb(70, 72, 168)
+    );
+  }
+}
